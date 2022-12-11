@@ -1,18 +1,20 @@
 ---
 import Navigation from "../components/Navigation.js";
 import Footer from "../components/Footer.js";
-import '../styles/modules/globals.module.scss';
+import "../styles/modules/globals.module.scss";
+const { title } = Astro.props;
 ---
+
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.svg" sizes="any" />
-    <title></title>
+    <title>{title}</title>
   </head>
   <body>
-  <Navigation/>
-  <slot></slot>
-  <Footer/>
+    <Navigation />
+    <slot />
+    <Footer />
   </body>
 </html>
