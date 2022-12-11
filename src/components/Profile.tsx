@@ -8,7 +8,7 @@ const Profile = () => {
             <header className={`${styles.profile__firstname} ${globalStyles.heading__huge}`}>Morten</header>
             <header className={`${styles.profile__middlename} ${globalStyles.heading__huge}`}>Kildahl</header>
             <header className={`${styles.profile__lastname} ${globalStyles.heading__huge}`}>Kristensen</header>
-            <img src="public/test2.png" className={styles.profile__image}></img>
+            <img src="/me.png" className={styles.profile__image}></img>
         </article>
     );
 };
