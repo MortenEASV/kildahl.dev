@@ -1,0 +1,130 @@
+//Mixins
+@mixin faux-subgrid($columns){
+  grid-column: span $columns;
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-gap: 0.5rem;
+}
+
+//Colors
+$color-yellow: #FFC66D;
+$color-green: #BADC58;
+$color-darkest: #0E1014;
+$color-dark: #20242D;
+$color-light: #96A1B5;
+$color-lighter: #D2D7DF;
+$color-lightest: #F0F2F4;
+
+//Fonts
+@font-face {
+  font-family: 'Montserrat';
+  src: url('public/fonts/Montserrat.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Mono Regular';
+  src: url('public/fonts/SFMono-Regular.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+//Misc
+:root {
+
+}
+body{
+  grid-column: span 28;
+  display: grid;
+  grid-template-columns: repeat(28, 1fr);
+  grid-gap: 0.5rem;
+  margin: 0 auto;
+  background-color: $color-darkest;
+}
+article{
+  margin-bottom: 5rem;
+}
+
+p{
+  margin-bottom: 1rem;
+  font-family: "Montserrat", monospace;
+  font-weight: 500;
+  line-height: 1.7;
+  color: $color-light;
+}
+
+a{
+  margin-bottom: 1rem;
+  font-family: "Montserrat", monospace;
+  font-weight: 500;
+  line-height: 1.7;
+  color: $color-green;
+  text-decoration: none;
+  border-bottom: 1px solid $color-green;
+}
+
+header{
+  margin-bottom: 1rem;
+}
+
+
+
+//Header styles
+.heading__huge {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.heading__xlarge {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.heading__large {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.heading__medium {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.heading__small {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.heading__tiny {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.text__large{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+.text__normal{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+}
+
+
+//Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+//Grid start and end
+$grid-start: 8;
+$grid-end: 22;

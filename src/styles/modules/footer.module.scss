@@ -1,0 +1,13 @@
+@import "globals.module";
+
+.footer {
+  @include faux-subgrid(28);
+  grid-row: 8;
+
+  &__header{
+    font-family: "SF Mono Regular", monospace;
+    font-weight: 500;
+    color: $color-yellow;
+    grid-column: calc(#{$grid-start} - 1) / span 4;
+  }
+}

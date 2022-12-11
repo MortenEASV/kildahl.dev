@@ -1,0 +1,14 @@
+@import "globals.module";
+
+.about {
+  @include faux-subgrid(15);
+  grid-column: 14 / span 15;
+  &__heading{
+    color: $color-light;
+    grid-column: span 8;
+  }
+  &__text{
+    text-align: justify;
+    grid-column: span 8;
+  }
+}

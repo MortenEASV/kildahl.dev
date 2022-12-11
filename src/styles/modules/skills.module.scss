@@ -1,0 +1,28 @@
+@import "globals.module";
+
+.skills {
+  @include faux-subgrid(28);
+  grid-column: 1 / span;
+  grid-row: 3;
+
+  &__heading {
+    grid-column: $grid-start / span 6;
+    color: $color-light;
+  }
+
+  &__container {
+    @include faux-subgrid(28);
+    height: 150px;
+    background-color: $color-dark;
+    grid-column: span 28;
+
+    svg {
+      grid-column: span 2;
+      height: 100px;
+      margin: auto;
+      &:first-child{
+        grid-column: 9 / span 2;
+      }
+    }
+  }
+}
