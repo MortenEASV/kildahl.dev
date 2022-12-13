@@ -1,8 +1,8 @@
 //Mixins
-@mixin faux-subgrid($columns){
-  grid-column: span $columns;
+@mixin faux-subgrid {
+  grid-column: span 14;
   display: grid;
-  grid-template-columns: repeat($columns, 1fr);
+  grid-template-columns: 1fr repeat(12,minmax(20px,1fr)) 1fr;
   grid-gap: 0.5rem;
 }
 
@@ -18,7 +18,7 @@ $color-lightest: #F0F2F4;
 //Fonts
 @font-face {
   font-family: 'Montserrat';
-  src: url('public/fonts/Montserrat.ttf') format('ttf');
+  src: url('/fonts/Montserrat.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -26,7 +26,7 @@ $color-lightest: #F0F2F4;
 
 @font-face {
   font-family: 'SF Mono Regular';
-  src: url('public/fonts/SFMono-Regular.woff2') format('woff');
+  src: url('/fonts/SFMono-Regular.woff2') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -36,19 +36,21 @@ $color-lightest: #F0F2F4;
 :root {
 
 }
-body{
-  grid-column: span 28;
+
+body {
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(28, 1fr);
+  grid-template-columns: 1fr repeat(12,minmax(20px,1fr)) 1fr;
   grid-gap: 0.5rem;
-  margin: 0 auto;
   background-color: $color-darkest;
 }
-article{
+
+article {
   margin-bottom: 5rem;
 }
 
-p{
+p {
+  margin-top: 0;
   margin-bottom: 1rem;
   font-family: "Montserrat", monospace;
   font-weight: 500;
@@ -56,7 +58,7 @@ p{
   color: $color-light;
 }
 
-a{
+a {
   margin-bottom: 1rem;
   font-family: "Montserrat", monospace;
   font-weight: 500;
@@ -66,10 +68,9 @@ a{
   border-bottom: 1px solid $color-green;
 }
 
-header{
+header {
   margin-bottom: 1rem;
 }
-
 
 
 //Header styles
@@ -109,22 +110,23 @@ header{
   font-weight: 900;
 }
 
-.text__large{
+.text__large {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
 }
-.text__normal{
+
+.text__normal {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
 }
 
 
 //Breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1400px;
 
 //Grid start and end
-$grid-start: 8;
-$grid-end: 22;
+$grid-start: 4;
+$grid-end: 12;

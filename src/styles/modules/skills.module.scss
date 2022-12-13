@@ -1,28 +1,28 @@
 @import "globals.module";
 
 .skills {
-  @include faux-subgrid(28);
+  @include faux-subgrid;
   grid-column: 1 / span;
   grid-row: 3;
 
   &__heading {
-    grid-column: $grid-start / span 6;
+    grid-column: #{$grid-start} / #{$grid-end};
     color: $color-light;
   }
 
   &__container {
-    @include faux-subgrid(28);
-    height: 150px;
+    grid-column: span 16;
+    height: 100px;
     background-color: $color-dark;
-    grid-column: span 28;
-
+    display: flex;
+    justify-content: center;
+    @media(min-width: $medium){
+      height: 150px;
+    }
     svg {
-      grid-column: span 2;
-      height: 100px;
-      margin: auto;
-      &:first-child{
-        grid-column: 9 / span 2;
-      }
+      height: 75%;
+      margin: auto 1rem auto 1rem;
+
     }
   }
 }

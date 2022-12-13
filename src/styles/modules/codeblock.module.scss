@@ -1,21 +1,47 @@
 @import "globals.module";
 
 .codeblock {
-  @include faux-subgrid(14);
-  grid-column: 1 / span 12;
+  @include faux-subgrid;
+
+  grid-column: 1 / span 13;
   font-family: "SF Mono Regular", monospace;
+  font-weight: 900;
   font-size: 14px;
-
-
   &__code {
+    border-radius: 10px;
+    grid-column: #{$grid-start} / span 4;
     background-color: $color-dark;
-    color: #000;
-    grid-column: #{$grid-start} / span 12;
     padding: 1rem;
-    pre{
-      display: block;
-      white-space: pre-wrap;
-    }
+    color: #CCCCCC;
   }
+
+  &__parameter {
+    color: #9E7BB0;
+    display: inline;
+  }
+
+  &__string {
+    color: #6A8759;
+    display: inline;
+  }
+
+  &__int {
+    color: #7A9EC2;
+    display: inline;
+  }
+
+  &__orange{
+    color: #CC8242;
+    display: inline;
+  }
+  &__white{
+    color: #CCCCCC;
+    display: inline;
+  }
+  &__yellow{
+    color: $color-yellow;
+    display: inline;
+  }
+
 }
 

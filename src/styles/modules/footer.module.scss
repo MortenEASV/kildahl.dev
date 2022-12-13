@@ -1,7 +1,7 @@
 @import "globals.module";
 
 .footer {
-  @include faux-subgrid(28);
+  @include faux-subgrid;
   grid-row: 8;
 
   &__header{

@@ -7,6 +7,7 @@ import {IconFlutter} from "../svg/IconFlutter";
 import {IconUmbraco} from "../svg/IconUmbraco";
 import {IconJava} from "../svg/IconJava";
 import {IconReact} from "../svg/IconReact";
+import {IconDocker} from "../svg/IconDocker";
 const Skills = () => {
     return (
         <article className={styles.skills}>
@@ -18,6 +19,7 @@ const Skills = () => {
                 <IconFlutter/>
                 <IconUmbraco/>
                 <IconJava/>
+                <IconDocker/>
             </div>
         </article>
     );
